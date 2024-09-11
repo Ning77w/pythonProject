@@ -2,7 +2,7 @@ import collections
 from functools import wraps
 
 #反转字符串
-s1 = ["h","e","l","l","o"]
+s1 = ["h","e","l","l","o","a"]
 
 class Solution01:    #切片
     def reverseString(self, s: list[str]) -> None:
@@ -129,8 +129,8 @@ def a_new_decorator(a_func):
         print("nice to meet you!")
     return wrapTheFunction
 
-def a_function_requiring_decoration(*args):
-    return print("wangning")
+# def a_function_requiring_decoration(*args):
+#     return print("wangning")
 
 #a_function_requiring_decoration()
 #a_function_requiring_decoration = a_new_decorator(a_function_requiring_decoration)
@@ -142,18 +142,29 @@ def a_function_requiring_decoration(*args):
 
 
 if __name__== '__main__':
-    '''
     print(Solution01().reverseString(s1))
+    '''
     print(Solution02().reverse(x))
     print(Solution03().firstUniqChar(s2))
     print(Solution04().isAnagram(s3,s4))
     print(Solution05().isPalindrome(s5))
-    '''
     print(a_function_requiring_decoration())
-    print(a_function_requiring_decoration.__name__)
+    #print(a_function_requiring_decoration.__name__)
+    '''
 
 
 
+# def send(url,method,arg):
+#     return xxx
+#
+# @send
+# def rerun(*args):
+#     @wraps(a_func):
+#     for i in range(3):
+#         result = send()
+#         if len(result) != 0:
+#             return True
+#     return False
 
 
 
